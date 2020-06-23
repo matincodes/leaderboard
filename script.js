@@ -22,13 +22,24 @@ fetch('script.json').then(function (response){
     //    var button = documnet.querySelector("button")
        points.addEventListener("click", function(){
         var button = document.querySelector("button");
+        var first = document.querySelector(".first")
+        var second = document.querySelector(".second")
+        var third = document.querySelector(".third")
           var column = $(this).data('column')
           var order = $(this).data('order')
-
+        var fp = document.querySelector("#first")
+        var sp = document.querySelector("#second")
+        var tp = document.querySelector("#third")
            if (order == "asc") {
               $(this).data('order', 'desc')
                array = array.sort((a,b) => a[column] < b[column] ? 1 : -1);
                button.innerHTML = "&#9650";
+               first.innerHTML = array[0].name
+               second.innerHTML = array[1].name
+               third.innerHTML = array[2].name
+                fp.innerHTML = array[0].score
+                sp.innerHTML = array[1].score
+                tp.innerHTML = array[1].score
             }else{
                $(this).data('order', 'asc')
                array = array.sort((a,b) => a[column] > b[column] ? 1 : -1);
