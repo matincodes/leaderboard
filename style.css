@@ -18,20 +18,43 @@ body{
 #head{
   font-size: 35px;
   text-align: center;
-  background: #fff;
   margin: 0px auto;
   width: 300px;
   color: black;
   font-family: 'Noto Serif', serif;
 
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 288px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+}
+
+.responsive-image {
+  width: 89px;
+  height: 89px;
+  border-radius: 50%;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 288px);
+  justify-content: center;
+  gap: 50px;
+}
 
 table{
-  width: 100%;
+  border-collapse: collapse;
+  width: 85%;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   margin: 30px auto;
-  padding: 5px;
+  border-radius: 50px 50px 0 0;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 thead{
@@ -40,24 +63,27 @@ thead{
 }
 
 th{
-  padding: 10px;
+  padding: 15px;
 }
 
 tbody{
-  padding: 10px;
+  padding: 15px;
   background: #fff;
-  text-align: center;
-  font-size: 13px;
+  text-align: left;
+  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.top{
-  background: red;
+.mytable tr{
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid rgb(194, 187, 187);
+}
+td{
+  
+  padding: 20px;
 }
 
-td{
-  padding: 10px;
-}
 
 
 
